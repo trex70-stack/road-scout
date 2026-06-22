@@ -11,7 +11,7 @@ Live-Verkehrssituation auf dem Dashboard – erkennt Verkehrsschilder und Hinder
 - TanStack Query (Server-State) + React Context (UI-State)
 - MapLibre GL JS (Karten, OSM-Daten)
 - Capacitor 6 (Mobile-Wrap für Android/iOS)
-- YOLO-Basierte Bilderkennung (On-Device, Platzhalter in `useTrafficDetection`)
+- YOLO-Basierte Bilderkennung (On-Device via TensorFlow.js + COCO-SSD)
 
 ## Entwicklung
 
@@ -47,10 +47,20 @@ Capacitor-Plugins installiert: Geolocation, Camera, Network, Haptics, StatusBar,
 - `src/context/` – DashboardContext (Redux-ähnlicher State via useReducer)
 - `src/providers/` – QueryProvider (TanStack), AuthProvider (Client-Side, Login offen)
 - `src/hooks/` – useGeolocation, useCamera, useSpeech, useTrafficDetection, useDashboardEngine
-- `src/lib/` – Typen, Reverse Geocoding (OSM Nominatim)
+- `src/lib/detection/` – TensorFlow.js Backend, COCO-SSD Hinderniserkennung, YOLO-Schilder-Schnittstelle, GPS-Schätzung
+- `src/lib/geocoding.ts` – Reverse Geocoding (OSM Nominatim)
+- `src/lib/types.ts` – Gemeinsame Typen
+
+## Bilderkennung (On-Device)
+
+**Hindernisse (aktiv):** COCO-SSD `lite_mobilenet_v2` erkennt PKW, LKW, Busse (→ LKW) und Personen. Läuft via TensorFlow.js mit WebGL-Backend direkt im Browser / in der Capacitor-WebView. Geschätzt ~5 FPS.
+
+**Schilder (Schnittstelle bereit):** `src/lib/detection/signDetector.ts` lädt ein custom YOLO-GraphModel von einer URL (via `setCustomSignModelUrl`). Bis ein trainiertes Modell bereitsteht, läuft ein Stub der `[]` zurückgibt.
+
+**GPS-Schätzung:** Bounding-Box-Größe → Abstandsschätzung, Box-Position + GPS-Heading → GPS-Position des Hindernisses (`src/lib/detection/geoEstimate.ts`).
 
 ## Offene Punkte
 
-- YOLO-Modell-Integration (TensorFlow Lite / ONNX Runtime / Core ML)
+- Custom YOLO-Schilder-Modell trainieren und via `setCustomSignModelUrl()` einbinden
 - Offline-Karten (Vector Tiles)
 - Login / Backend (aktuell unentschieden)

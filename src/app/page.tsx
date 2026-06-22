@@ -15,7 +15,7 @@ export default function DashboardPage() {
   const [cameraEnabled, setCameraEnabled] = useState(true);
   const [speechEnabled, setSpeechEnabled] = useState(true);
 
-  const { state, camera, geoError, isDetecting } = useDashboardEngine({
+  const { state, camera, geoError, isDetecting, isLoadingModel, modelError, detectionFps } = useDashboardEngine({
     detectionEnabled,
     cameraEnabled,
     speechEnabled,
@@ -71,10 +71,17 @@ export default function DashboardPage() {
 
       <footer className="px-4 py-2 bg-neutral-100 border-t border-neutral-200 flex items-center justify-between text-[10px] text-neutral-500">
         <span>
-          {isDetecting ? "Erkennung aktiv" : "Erkennung pausiert"}
+          {isLoadingModel
+            ? "Lade KI-Modell …"
+            : isDetecting
+            ? `Erkennung aktiv · ${detectionFps} FPS`
+            : "Erkennung pausiert"}
           {state.isOffline && " · Offline"}
         </span>
-        {geoError && <span className="text-red-600">GPS: {geoError}</span>}
+        <span className="flex items-center gap-2">
+          {modelError && <span className="text-orange-600">KI: {modelError}</span>}
+          {geoError && <span className="text-red-600">GPS: {geoError}</span>}
+        </span>
       </footer>
     </div>
   );

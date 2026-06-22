@@ -32,7 +32,8 @@ export function useDashboardEngine({ detectionEnabled, cameraEnabled, speechEnab
   const detection = useTrafficDetection({
     enabled: detectionEnabled && camera.isStreaming,
     videoRef: camera.videoRef,
-    fps: 10,
+    fps: 5,
+    position: state.position,
   });
 
   useEffect(() => {
@@ -114,6 +115,9 @@ export function useDashboardEngine({ detectionEnabled, cameraEnabled, speechEnab
     camera,
     geoError,
     isDetecting: detection.isRunning,
+    isLoadingModel: detection.isLoadingModel,
+    modelError: detection.modelError,
+    detectionFps: detection.fps,
   };
 }
 

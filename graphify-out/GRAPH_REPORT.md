@@ -1,12 +1,12 @@
 # Graph Report - /Users/thomas/Projects/road-scout  (2026-06-22)
 
 ## Corpus Check
-- 25 files · ~4,465 words
+- 30 files · ~10,013 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 46 nodes · 27 edges · 22 communities detected
-- Extraction: 81% EXTRACTED · 19% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.8)
+- 71 nodes · 63 edges · 23 communities detected
+- Extraction: 75% EXTRACTED · 25% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -32,24 +32,27 @@
 - [[_COMMUNITY_Community 19|Community 19]]
 - [[_COMMUNITY_Community 20|Community 20]]
 - [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `useDashboardEngine()` - 6 edges
-2. `useDashboard()` - 2 edges
-3. `useTrafficDetection()` - 2 edges
-4. `useGeolocation()` - 2 edges
-5. `useCamera()` - 2 edges
-6. `useSpeech()` - 2 edges
-7. `reverseGeocode()` - 2 edges
-8. `parseMaxSpeed()` - 2 edges
+2. `detectFrame()` - 5 edges
+3. `toObstacle()` - 5 edges
+4. `loadSignModel()` - 4 edges
+5. `loadObstacleModel()` - 3 edges
+6. `detectObstacles()` - 3 edges
+7. `nextId()` - 3 edges
+8. `initModels()` - 3 edges
+9. `loadCustomModel()` - 3 edges
+10. `CustomSignModel` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `useDashboardEngine()` --calls--> `useDashboard()`  [INFERRED]
-  /Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts → /Users/thomas/Projects/road-scout/src/context/DashboardContext.tsx
-- `useDashboardEngine()` --calls--> `useTrafficDetection()`  [INFERRED]
-  /Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts → /Users/thomas/Projects/road-scout/src/hooks/useTrafficDetection.ts
-- `useDashboardEngine()` --calls--> `useGeolocation()`  [INFERRED]
-  /Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts → /Users/thomas/Projects/road-scout/src/hooks/useGeolocation.ts
+- `useDashboard()` --calls--> `useDashboardEngine()`  [INFERRED]
+  /Users/thomas/Projects/road-scout/src/context/DashboardContext.tsx → /Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts
+- `useTrafficDetection()` --calls--> `useDashboardEngine()`  [INFERRED]
+  /Users/thomas/Projects/road-scout/src/hooks/useTrafficDetection.ts → /Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts
+- `useGeolocation()` --calls--> `useDashboardEngine()`  [INFERRED]
+  /Users/thomas/Projects/road-scout/src/hooks/useGeolocation.ts → /Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts
 - `useDashboardEngine()` --calls--> `useSpeech()`  [INFERRED]
   /Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts → /Users/thomas/Projects/road-scout/src/hooks/useSpeech.ts
 - `useDashboardEngine()` --calls--> `useCamera()`  [INFERRED]
@@ -58,28 +61,28 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.22
-Nodes (4): useCamera(), useDashboardEngine(), useGeolocation(), useSpeech()
+Cohesion: 0.13
+Nodes (6): useDashboard(), useCamera(), useDashboardEngine(), useGeolocation(), useSpeech(), useTrafficDetection()
 
 ### Community 1 - "Community 1"
-Cohesion: 0.5
-Nodes (1): useDashboard()
+Cohesion: 0.2
+Nodes (6): classToSign(), CustomSignModel, loadCustomModel(), parseYoloOutput(), StubSignModel, ensureBackend()
 
 ### Community 2 - "Community 2"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 0.39
+Nodes (6): nextId(), toObstacle(), toSign(), estimateBearingDeg(), estimateDistanceMeters(), offsetLatLng()
 
 ### Community 3 - "Community 3"
-Cohesion: 0.67
-Nodes (1): useTrafficDetection()
+Cohesion: 0.43
+Nodes (5): detectFrame(), initModels(), detectObstacles(), loadObstacleModel(), loadSignModel()
 
 ### Community 4 - "Community 4"
-Cohesion: 1.0
-Nodes (2): parseMaxSpeed(), reverseGeocode()
+Cohesion: 0.67
+Nodes (0): 
 
 ### Community 5 - "Community 5"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): parseMaxSpeed(), reverseGeocode()
 
 ### Community 6 - "Community 6"
 Cohesion: 1.0
@@ -145,50 +148,60 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
+### Community 22 - "Community 22"
+Cohesion: 1.0
+Nodes (0): 
+
 ## Knowledge Gaps
-- **Thin community `Community 5`** (2 nodes): `RootLayout()`, `layout.tsx`
+- **Thin community `Community 6`** (2 nodes): `RootLayout()`, `layout.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 6`** (2 nodes): `QueryProvider()`, `QueryProvider.tsx`
+- **Thin community `Community 7`** (2 nodes): `QueryProvider()`, `QueryProvider.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 7`** (2 nodes): `ObstacleList()`, `ObstacleList.tsx`
+- **Thin community `Community 8`** (2 nodes): `ObstacleList()`, `ObstacleList.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 8`** (2 nodes): `SafetyNotice()`, `SafetyNotice.tsx`
+- **Thin community `Community 9`** (2 nodes): `SafetyNotice()`, `SafetyNotice.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 9`** (2 nodes): `RoadInfoPanel()`, `RoadInfoPanel.tsx`
+- **Thin community `Community 10`** (2 nodes): `RoadInfoPanel()`, `RoadInfoPanel.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 10`** (2 nodes): `MapView()`, `MapViewClient.tsx`
+- **Thin community `Community 11`** (2 nodes): `MapView()`, `MapViewClient.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 11`** (2 nodes): `MapView()`, `MapView.tsx`
+- **Thin community `Community 12`** (2 nodes): `MapView()`, `MapView.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 12`** (1 nodes): `postcss.config.mjs`
+- **Thin community `Community 13`** (1 nodes): `postcss.config.mjs`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 13`** (1 nodes): `next.config.mjs`
+- **Thin community `Community 14`** (1 nodes): `next.config.mjs`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (1 nodes): `next-env.d.ts`
+- **Thin community `Community 15`** (1 nodes): `next-env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 15`** (1 nodes): `tailwind.config.ts`
+- **Thin community `Community 16`** (1 nodes): `tailwind.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 16`** (1 nodes): `capacitor.config.ts`
+- **Thin community `Community 17`** (1 nodes): `capacitor.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 17`** (1 nodes): `page.tsx`
+- **Thin community `Community 18`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (1 nodes): `CameraPreview.tsx`
+- **Thin community `Community 19`** (1 nodes): `CameraPreview.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (1 nodes): `SignDisplay.tsx`
+- **Thin community `Community 20`** (1 nodes): `SignDisplay.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 20`** (1 nodes): `SpeedDisplay.tsx`
+- **Thin community `Community 21`** (1 nodes): `SpeedDisplay.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 21`** (1 nodes): `types.ts`
+- **Thin community `Community 22`** (1 nodes): `types.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `useDashboardEngine()` connect `Community 0` to `Community 1`, `Community 3`?**
-  _High betweenness centrality (0.093) - this node is a cross-community bridge._
-- **Why does `useDashboard()` connect `Community 1` to `Community 0`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
-- **Why does `useTrafficDetection()` connect `Community 3` to `Community 0`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `detectFrame()` connect `Community 3` to `Community 2`?**
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+- **Why does `loadSignModel()` connect `Community 3` to `Community 1`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `useDashboardEngine()` (e.g. with `useDashboard()` and `useSpeech()`) actually correct?**
   _`useDashboardEngine()` has 5 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 4 inferred relationships involving `detectFrame()` (e.g. with `loadObstacleModel()` and `loadSignModel()`) actually correct?**
+  _`detectFrame()` has 4 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 3 inferred relationships involving `toObstacle()` (e.g. with `estimateDistanceMeters()` and `estimateBearingDeg()`) actually correct?**
+  _`toObstacle()` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 2 inferred relationships involving `loadSignModel()` (e.g. with `initModels()` and `detectFrame()`) actually correct?**
+  _`loadSignModel()` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 2 inferred relationships involving `loadObstacleModel()` (e.g. with `initModels()` and `detectFrame()`) actually correct?**
+  _`loadObstacleModel()` has 2 INFERRED edges - model-reasoned connections that need verification._
