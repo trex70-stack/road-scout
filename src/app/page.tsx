@@ -7,6 +7,7 @@ import { SignDisplay } from "@/components/dashboard/SignDisplay";
 import { RoadInfoPanel } from "@/components/dashboard/RoadInfoPanel";
 import { ObstacleList } from "@/components/dashboard/ObstacleList";
 import { CameraPreview } from "@/components/dashboard/CameraPreview";
+import { HudDangerBar } from "@/components/dashboard/HudDangerBar";
 import { MapView } from "@/components/map/MapViewClient";
 import { SafetyNotice } from "@/components/dashboard/SafetyNotice";
 
@@ -39,23 +40,25 @@ export default function DashboardPage() {
       </header>
 
       <section className="px-4 py-3 bg-white border-b border-neutral-200">
-        <div className="flex items-start justify-between gap-3">
-          <SpeedDisplay
-            speedKmh={speedKmh}
-            maxSpeedKmh={maxSpeed}
-            source={state.currentRoad?.source ?? "unknown"}
-            overspeed={overspeed}
-          />
-          <CameraPreview
-            videoRef={camera.videoRef}
-            isStreaming={camera.isStreaming}
-            error={camera.error}
-          />
-        </div>
+        <SpeedDisplay
+          speedKmh={speedKmh}
+          maxSpeedKmh={maxSpeed}
+          source={state.currentRoad?.source ?? "unknown"}
+          overspeed={overspeed}
+        />
       </section>
 
-      <section className="flex-1 px-4 py-3 min-h-[40vh]">
-        <MapView position={state.position} obstacles={state.obstacles} />
+      <section className="px-4 py-3">
+        <CameraPreview
+          videoRef={camera.videoRef}
+          isStreaming={camera.isStreaming}
+          error={camera.error}
+          lastFrame={state.lastFrame}
+          isDetecting={isDetecting}
+        />
+        <div className="mt-2">
+          <HudDangerBar obstacles={state.obstacles} />
+        </div>
       </section>
 
       <section className="px-4 py-3 bg-white border-t border-neutral-200 space-y-3">
@@ -67,6 +70,10 @@ export default function DashboardPage() {
           <h2 className="text-[10px] uppercase tracking-wide text-neutral-500 mb-1">Hindernisse</h2>
           <ObstacleList obstacles={state.obstacles} />
         </div>
+      </section>
+
+      <section className="flex-1 px-4 py-3 min-h-[35vh]">
+        <MapView position={state.position} obstacles={state.obstacles} />
       </section>
 
       <footer className="px-4 py-2 bg-neutral-100 border-t border-neutral-200 flex items-center justify-between text-[10px] text-neutral-500">

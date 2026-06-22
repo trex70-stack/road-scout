@@ -6,6 +6,8 @@ export type SignType =
   | "warning"
   | "other";
 
+export type BBox = [number, number, number, number];
+
 export interface DetectedSign {
   id: string;
   type: SignType;
@@ -14,6 +16,7 @@ export interface DetectedSign {
   confidence: number;
   detectedAt: number;
   source: "camera" | "map";
+  bbox?: BBox;
 }
 
 export type ObstacleType = "car" | "truck" | "person" | "unknown";
@@ -27,6 +30,7 @@ export interface DetectedObstacle {
   longitude: number;
   distanceMeters?: number;
   detectedAt: number;
+  bbox?: BBox;
 }
 
 export interface GeoPosition {
@@ -52,4 +56,13 @@ export interface DashboardState {
   obstacles: DetectedObstacle[];
   isDetecting: boolean;
   isOffline: boolean;
+  lastFrame: FrameBoxes | null;
+}
+
+export interface FrameBoxes {
+  signs: DetectedSign[];
+  obstacles: DetectedObstacle[];
+  frameWidth: number;
+  frameHeight: number;
+  capturedAt: number;
 }

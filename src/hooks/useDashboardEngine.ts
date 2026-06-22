@@ -16,7 +16,7 @@ interface Options {
 }
 
 export function useDashboardEngine({ detectionEnabled, cameraEnabled, speechEnabled }: Options) {
-  const { state, setPosition, setRoad, addSign, addObstacle, setDetecting, setOffline, clearStale } = useDashboard();
+  const { state, setPosition, setRoad, addSign, addObstacle, setDetecting, setOffline, setLastFrame, clearStale } = useDashboard();
   const { speak } = useSpeech();
   const lastAnnouncedLimitRef = useRef<number | null>(null);
   const lastAnnouncedObstacleRef = useRef<string | null>(null);
@@ -74,7 +74,15 @@ export function useDashboardEngine({ detectionEnabled, cameraEnabled, speechEnab
     for (const sign of detection.lastResult.signs) {
       addSign(sign);
     }
-  }, [detection.lastResult, addSign]);
+    const video = camera.videoRef.current;
+    setLastFrame({
+      signs: detection.lastResult.signs,
+      obstacles: detection.lastResult.obstacles,
+      frameWidth: video?.videoWidth || 1,
+      frameHeight: video?.videoHeight || 1,
+      capturedAt: Date.now(),
+    });
+  }, [detection.lastResult, addSign, setLastFrame, camera.videoRef]);
 
   useEffect(() => {
     for (const obstacle of detection.lastResult.obstacles) {

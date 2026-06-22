@@ -40,6 +40,9 @@ next-env.d.ts
 /ios/
 .kotlin/
 
+# local HTTPS certs (mkcert) - nicht einchecken
+/certs/
+
 # graphify (AST cache is regenerable; keep graph.json + report)
 graphify-out/cache/
 

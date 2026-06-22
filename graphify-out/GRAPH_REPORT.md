@@ -1,12 +1,12 @@
 # Graph Report - /Users/thomas/Projects/road-scout  (2026-06-22)
 
 ## Corpus Check
-- 30 files · ~10,013 words
+- 33 files · ~12,680 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 71 nodes · 63 edges · 23 communities detected
-- Extraction: 75% EXTRACTED · 25% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.8)
+- 80 nodes · 70 edges · 26 communities detected
+- Extraction: 77% EXTRACTED · 23% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -33,6 +33,9 @@
 - [[_COMMUNITY_Community 20|Community 20]]
 - [[_COMMUNITY_Community 21|Community 21]]
 - [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `useDashboardEngine()` - 6 edges
@@ -77,20 +80,20 @@ Cohesion: 0.43
 Nodes (5): detectFrame(), initModels(), detectObstacles(), loadObstacleModel(), loadSignModel()
 
 ### Community 4 - "Community 4"
-Cohesion: 0.67
+Cohesion: 0.4
 Nodes (0): 
 
 ### Community 5 - "Community 5"
-Cohesion: 1.0
-Nodes (2): parseMaxSpeed(), reverseGeocode()
+Cohesion: 0.67
+Nodes (0): 
 
 ### Community 6 - "Community 6"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): classify(), HudDangerBar()
 
 ### Community 7 - "Community 7"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): parseMaxSpeed(), reverseGeocode()
 
 ### Community 8 - "Community 8"
 Cohesion: 1.0
@@ -152,49 +155,63 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
+### Community 23 - "Community 23"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 24 - "Community 24"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 25 - "Community 25"
+Cohesion: 1.0
+Nodes (0): 
+
 ## Knowledge Gaps
-- **Thin community `Community 6`** (2 nodes): `RootLayout()`, `layout.tsx`
+- **Thin community `Community 8`** (2 nodes): `RootLayout()`, `layout.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 7`** (2 nodes): `QueryProvider()`, `QueryProvider.tsx`
+- **Thin community `Community 9`** (2 nodes): `QueryProvider()`, `QueryProvider.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 8`** (2 nodes): `ObstacleList()`, `ObstacleList.tsx`
+- **Thin community `Community 10`** (2 nodes): `ObstacleList()`, `ObstacleList.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 9`** (2 nodes): `SafetyNotice()`, `SafetyNotice.tsx`
+- **Thin community `Community 11`** (2 nodes): `SafetyNotice()`, `SafetyNotice.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 10`** (2 nodes): `RoadInfoPanel()`, `RoadInfoPanel.tsx`
+- **Thin community `Community 12`** (2 nodes): `RoadInfoPanel()`, `RoadInfoPanel.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 11`** (2 nodes): `MapView()`, `MapViewClient.tsx`
+- **Thin community `Community 13`** (2 nodes): `MapView()`, `MapViewClient.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 12`** (2 nodes): `MapView()`, `MapView.tsx`
+- **Thin community `Community 14`** (2 nodes): `MapView()`, `MapView.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 13`** (1 nodes): `postcss.config.mjs`
+- **Thin community `Community 15`** (1 nodes): `postcss.config.mjs`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (1 nodes): `next.config.mjs`
+- **Thin community `Community 16`** (1 nodes): `next.config.mjs`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 15`** (1 nodes): `next-env.d.ts`
+- **Thin community `Community 17`** (1 nodes): `next-env.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 16`** (1 nodes): `tailwind.config.ts`
+- **Thin community `Community 18`** (1 nodes): `tailwind.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 17`** (1 nodes): `capacitor.config.ts`
+- **Thin community `Community 19`** (1 nodes): `server.mjs`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (1 nodes): `page.tsx`
+- **Thin community `Community 20`** (1 nodes): `capacitor.config.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (1 nodes): `CameraPreview.tsx`
+- **Thin community `Community 21`** (1 nodes): `page.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 20`** (1 nodes): `SignDisplay.tsx`
+- **Thin community `Community 22`** (1 nodes): `CameraPreview.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 21`** (1 nodes): `SpeedDisplay.tsx`
+- **Thin community `Community 23`** (1 nodes): `SignDisplay.tsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 22`** (1 nodes): `types.ts`
+- **Thin community `Community 24`** (1 nodes): `SpeedDisplay.tsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 25`** (1 nodes): `types.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `detectFrame()` connect `Community 3` to `Community 2`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Why does `loadSignModel()` connect `Community 3` to `Community 1`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `useDashboardEngine()` (e.g. with `useDashboard()` and `useSpeech()`) actually correct?**
   _`useDashboardEngine()` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 4 inferred relationships involving `detectFrame()` (e.g. with `loadObstacleModel()` and `loadSignModel()`) actually correct?**

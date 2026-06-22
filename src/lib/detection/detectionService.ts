@@ -58,6 +58,7 @@ function toSign(box: SignBox, detectedAt: number): DetectedSign {
     confidence: box.confidence,
     detectedAt,
     source: "camera",
+    bbox: box.bbox,
   };
 }
 
@@ -90,6 +91,7 @@ function toObstacle(
     longitude: lon,
     distanceMeters: Number.isFinite(distance) ? Math.round(distance) : undefined,
     detectedAt,
+    bbox: box.bbox,
   };
 }
 

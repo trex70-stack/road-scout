@@ -7,6 +7,7 @@ import type {
   DetectedObstacle,
   GeoPosition,
   RoadInfo,
+  FrameBoxes,
 } from "@/lib/types";
 
 type Action =
@@ -17,7 +18,8 @@ type Action =
   | { type: "ADD_OBSTACLE"; obstacle: DetectedObstacle }
   | { type: "CLEAR_STALE_OBSTACLES"; before: number }
   | { type: "SET_DETECTING"; isDetecting: boolean }
-  | { type: "SET_OFFLINE"; isOffline: boolean };
+  | { type: "SET_OFFLINE"; isOffline: boolean }
+  | { type: "SET_LAST_FRAME"; frame: FrameBoxes };
 
 const MAX_SIGNS = 10;
 const MAX_OBSTACLES = 20;
@@ -54,6 +56,8 @@ function reducer(state: DashboardState, action: Action): DashboardState {
       return { ...state, isDetecting: action.isDetecting };
     case "SET_OFFLINE":
       return { ...state, isOffline: action.isOffline };
+    case "SET_LAST_FRAME":
+      return { ...state, lastFrame: action.frame };
     default:
       return state;
   }
@@ -67,6 +71,7 @@ const initialState: DashboardState = {
   obstacles: [],
   isDetecting: false,
   isOffline: false,
+  lastFrame: null,
 };
 
 interface DashboardContextValue {
@@ -77,6 +82,7 @@ interface DashboardContextValue {
   addObstacle: (obstacle: DetectedObstacle) => void;
   setDetecting: (isDetecting: boolean) => void;
   setOffline: (isOffline: boolean) => void;
+  setLastFrame: (frame: FrameBoxes) => void;
   clearStale: (olderThanMs: number) => void;
 }
 
@@ -97,6 +103,7 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
   const addObstacle = useCallback((obstacle: DetectedObstacle) => dispatch({ type: "ADD_OBSTACLE", obstacle }), []);
   const setDetecting = useCallback((isDetecting: boolean) => dispatch({ type: "SET_DETECTING", isDetecting }), []);
   const setOffline = useCallback((isOffline: boolean) => dispatch({ type: "SET_OFFLINE", isOffline }), []);
+  const setLastFrame = useCallback((frame: FrameBoxes) => dispatch({ type: "SET_LAST_FRAME", frame }), []);
 
   const clearStale = useCallback((olderThanMs: number) => {
     const before = Date.now() - olderThanMs;
@@ -106,7 +113,7 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <DashboardContext.Provider
-      value={{ state, setPosition, setRoad, addSign, addObstacle, setDetecting, setOffline, clearStale }}
+      value={{ state, setPosition, setRoad, addSign, addObstacle, setDetecting, setOffline, setLastFrame, clearStale }}
     >
       {children}
     </DashboardContext.Provider>
