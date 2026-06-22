@@ -1,4 +1,4 @@
-path: ./data/road_scout
+path: /Users/thomas/Projects/road-scout/training/data/road_scout
 train: images/train
 val: images/val
 

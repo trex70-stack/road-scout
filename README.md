@@ -11,7 +11,7 @@ Live-Verkehrssituation auf dem Dashboard – erkennt Verkehrsschilder und Hinder
 - TanStack Query (Server-State) + React Context (UI-State)
 - MapLibre GL JS (Karten, OSM-Daten)
 - Capacitor 6 (Mobile-Wrap für Android/iOS)
-- YOLO-Basierte Bilderkennung (On-Device via TensorFlow.js + COCO-SSD)
+- YOLOv8n Bilderkennung (On-Device via ONNX Runtime Web, trainiert auf COCO + Schildern)
 
 ## Entwicklung
 
@@ -47,20 +47,22 @@ Capacitor-Plugins installiert: Geolocation, Camera, Network, Haptics, StatusBar,
 - `src/context/` – DashboardContext (Redux-ähnlicher State via useReducer)
 - `src/providers/` – QueryProvider (TanStack), AuthProvider (Client-Side, Login offen)
 - `src/hooks/` – useGeolocation, useCamera, useSpeech, useTrafficDetection, useDashboardEngine
-- `src/lib/detection/` – TensorFlow.js Backend, COCO-SSD Hinderniserkennung, YOLO-Schilder-Schnittstelle, GPS-Schätzung
+- `src/lib/detection/` – YOLO-Detektor (ONNX Runtime Web), GPS-Schätzung, Detection-Service
 - `src/lib/geocoding.ts` – Reverse Geocoding (OSM Nominatim)
 - `src/lib/types.ts` – Gemeinsame Typen
 
 ## Bilderkennung (On-Device)
 
-**Hindernisse (aktiv):** COCO-SSD `lite_mobilenet_v2` erkennt PKW, LKW, Busse (→ LKW) und Personen. Läuft via TensorFlow.js mit WebGL-Backend direkt im Browser / in der Capacitor-WebView. Geschätzt ~5 FPS.
+**Unified YOLOv8n-Modell:** Ein einzelnes Modell erkennt sowohl Hindernisse (PKW, LKW, Bus, Person) als auch Verkehrsschilder (Tempolimit 30/50/70/100, Stop, Vorfahrt, Einfahrt verboten).
 
-**Schilder (Schnittstelle bereit):** `src/lib/detection/signDetector.ts` lädt ein custom YOLO-GraphModel von einer URL (via `setCustomSignModelUrl`). Bis ein trainiertes Modell bereitsteht, läuft ein Stub der `[]` zurückgibt.
+**Laufzeit:** ONNX Runtime Web mit WebGL-Backend – laedt das ONNX-Modell direkt, keine TF.js-Konvertierung noetig. ~25 ms Inferenz pro Frame.
 
-**GPS-Schätzung:** Bounding-Box-Größe → Abstandsschätzung, Box-Position + GPS-Heading → GPS-Position des Hindernisses (`src/lib/detection/geoEstimate.ts`).
+**Modell:** `public/models/yolov8n_road/best.onnx` (12 MB, 3M Parameter)
+
+**Training:** Siehe `training/README.md` – YOLOv8n trainiert auf COCO val2017 + Schilder-Datensatz, exportiert als ONNX.
 
 ## Offene Punkte
 
-- Custom YOLO-Schilder-Modell trainieren und via `setCustomSignModelUrl()` einbinden
+- Schilder-Trainingsdaten ergänzen (GTSDB offline – Roboflow/eigene Aufnahmen)
 - Offline-Karten (Vector Tiles)
 - Login / Backend (aktuell unentschieden)
