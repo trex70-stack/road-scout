@@ -9,7 +9,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/postcss.config.mjs",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_postcss_config_mjs",
-      "community": 15,
+      "community": 17,
       "norm_label": "postcss.config.mjs"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/next.config.mjs",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_next_config_mjs",
-      "community": 16,
+      "community": 18,
       "norm_label": "next.config.mjs"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/next-env.d.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_next_env_d_ts",
-      "community": 17,
+      "community": 19,
       "norm_label": "next-env.d.ts"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/tailwind.config.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_tailwind_config_ts",
-      "community": 18,
+      "community": 20,
       "norm_label": "tailwind.config.ts"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/server.mjs",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_server_mjs",
-      "community": 19,
+      "community": 21,
       "norm_label": "server.mjs"
     },
     {
@@ -54,8 +54,152 @@
       "source_file": "/Users/thomas/Projects/road-scout/capacitor.config.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_capacitor_config_ts",
-      "community": 20,
+      "community": 22,
       "norm_label": "capacitor.config.ts"
+    },
+    {
+      "label": "prepare_dataset.py",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L1",
+      "id": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "community": 2,
+      "norm_label": "prepare_dataset.py"
+    },
+    {
+      "label": "download()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L74",
+      "id": "prepare_dataset_download",
+      "community": 2,
+      "norm_label": "download()"
+    },
+    {
+      "label": "extract()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L87",
+      "id": "prepare_dataset_extract",
+      "community": 2,
+      "norm_label": "extract()"
+    },
+    {
+      "label": "ensure_dir()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L95",
+      "id": "prepare_dataset_ensure_dir",
+      "community": 2,
+      "norm_label": "ensure_dir()"
+    },
+    {
+      "label": "prepare_gtsdb()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L100",
+      "id": "prepare_dataset_prepare_gtsdb",
+      "community": 2,
+      "norm_label": "prepare_gtsdb()"
+    },
+    {
+      "label": "prepare_coco()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L177",
+      "id": "prepare_dataset_prepare_coco",
+      "community": 2,
+      "norm_label": "prepare_coco()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L253",
+      "id": "prepare_dataset_main",
+      "community": 2,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Datensatz-Vorbereitung fuer Road Scout. Laedt GTSDB (Verkehrsschilder) + COCO-Su",
+      "file_type": "rationale",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L1",
+      "id": "prepare_dataset_rationale_1",
+      "community": 2,
+      "norm_label": "datensatz-vorbereitung fuer road scout. laedt gtsdb (verkehrsschilder) + coco-su"
+    },
+    {
+      "label": "GTSDB laden und in YOLO-Format konvertieren.",
+      "file_type": "rationale",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L101",
+      "id": "prepare_dataset_rationale_101",
+      "community": 2,
+      "norm_label": "gtsdb laden und in yolo-format konvertieren."
+    },
+    {
+      "label": "COCO-Subset (Auto, LKW, Bus, Person) in YOLO-Format.",
+      "file_type": "rationale",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L178",
+      "id": "prepare_dataset_rationale_178",
+      "community": 2,
+      "norm_label": "coco-subset (auto, lkw, bus, person) in yolo-format."
+    },
+    {
+      "label": "export_models.py",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/export_models.py",
+      "source_location": "L1",
+      "id": "users_thomas_projects_road_scout_training_export_models_py",
+      "community": 5,
+      "norm_label": "export_models.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/export_models.py",
+      "source_location": "L25",
+      "id": "export_models_main",
+      "community": 5,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Export des trainierten YOLOv8n-Modells in alle Formate:   - TF.js (Web/Capacitor",
+      "file_type": "rationale",
+      "source_file": "/Users/thomas/Projects/road-scout/training/export_models.py",
+      "source_location": "L1",
+      "id": "export_models_rationale_1",
+      "community": 5,
+      "norm_label": "export des trainierten yolov8n-modells in alle formate:   - tf.js (web/capacitor"
+    },
+    {
+      "label": "train.py",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/train.py",
+      "source_location": "L1",
+      "id": "users_thomas_projects_road_scout_training_train_py",
+      "community": 6,
+      "norm_label": "train.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "/Users/thomas/Projects/road-scout/training/train.py",
+      "source_location": "L27",
+      "id": "train_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "YOLOv8n-Training fuer Road Scout (Schilder + Hindernisse). Laeuft auf Apple Sili",
+      "file_type": "rationale",
+      "source_file": "/Users/thomas/Projects/road-scout/training/train.py",
+      "source_location": "L1",
+      "id": "train_rationale_1",
+      "community": 6,
+      "norm_label": "yolov8n-training fuer road scout (schilder + hindernisse). laeuft auf apple sili"
     },
     {
       "label": "DashboardContext.tsx",
@@ -63,7 +207,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/context/DashboardContext.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_context_dashboardcontext_tsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "dashboardcontext.tsx"
     },
     {
@@ -72,7 +216,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/context/DashboardContext.tsx",
       "source_location": "L27",
       "id": "dashboardcontext_reducer",
-      "community": 0,
+      "community": 1,
       "norm_label": "reducer()"
     },
     {
@@ -81,7 +225,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/context/DashboardContext.tsx",
       "source_location": "L91",
       "id": "dashboardcontext_usedashboard",
-      "community": 0,
+      "community": 1,
       "norm_label": "usedashboard()"
     },
     {
@@ -90,7 +234,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/context/DashboardContext.tsx",
       "source_location": "L97",
       "id": "dashboardcontext_dashboardprovider",
-      "community": 0,
+      "community": 1,
       "norm_label": "dashboardprovider()"
     },
     {
@@ -99,7 +243,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/app/layout.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_app_layout_tsx",
-      "community": 8,
+      "community": 10,
       "norm_label": "layout.tsx"
     },
     {
@@ -108,7 +252,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/app/layout.tsx",
       "source_location": "L32",
       "id": "layout_rootlayout",
-      "community": 8,
+      "community": 10,
       "norm_label": "rootlayout()"
     },
     {
@@ -117,7 +261,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/app/page.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_app_page_tsx",
-      "community": 21,
+      "community": 23,
       "norm_label": "page.tsx"
     },
     {
@@ -126,7 +270,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/providers/AuthProvider.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_providers_authprovider_tsx",
-      "community": 5,
+      "community": 7,
       "norm_label": "authprovider.tsx"
     },
     {
@@ -135,7 +279,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/providers/AuthProvider.tsx",
       "source_location": "L15",
       "id": "authprovider_useauth",
-      "community": 5,
+      "community": 7,
       "norm_label": "useauth()"
     },
     {
@@ -144,7 +288,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/providers/AuthProvider.tsx",
       "source_location": "L19",
       "id": "authprovider_authprovider",
-      "community": 5,
+      "community": 7,
       "norm_label": "authprovider()"
     },
     {
@@ -153,7 +297,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/providers/QueryProvider.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_providers_queryprovider_tsx",
-      "community": 9,
+      "community": 11,
       "norm_label": "queryprovider.tsx"
     },
     {
@@ -162,7 +306,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/providers/QueryProvider.tsx",
       "source_location": "L6",
       "id": "queryprovider_queryprovider",
-      "community": 9,
+      "community": 11,
       "norm_label": "queryprovider()"
     },
     {
@@ -216,7 +360,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/ObstacleList.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_dashboard_obstaclelist_tsx",
-      "community": 10,
+      "community": 12,
       "norm_label": "obstaclelist.tsx"
     },
     {
@@ -225,7 +369,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/ObstacleList.tsx",
       "source_location": "L23",
       "id": "obstaclelist_obstaclelist",
-      "community": 10,
+      "community": 12,
       "norm_label": "obstaclelist()"
     },
     {
@@ -234,7 +378,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/SafetyNotice.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_dashboard_safetynotice_tsx",
-      "community": 11,
+      "community": 13,
       "norm_label": "safetynotice.tsx"
     },
     {
@@ -243,7 +387,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/SafetyNotice.tsx",
       "source_location": "L5",
       "id": "safetynotice_safetynotice",
-      "community": 11,
+      "community": 13,
       "norm_label": "safetynotice()"
     },
     {
@@ -252,7 +396,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/CameraPreview.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_dashboard_camerapreview_tsx",
-      "community": 22,
+      "community": 24,
       "norm_label": "camerapreview.tsx"
     },
     {
@@ -261,7 +405,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/SignDisplay.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_dashboard_signdisplay_tsx",
-      "community": 23,
+      "community": 25,
       "norm_label": "signdisplay.tsx"
     },
     {
@@ -270,7 +414,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/HudDangerBar.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_dashboard_huddangerbar_tsx",
-      "community": 6,
+      "community": 8,
       "norm_label": "huddangerbar.tsx"
     },
     {
@@ -279,7 +423,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/HudDangerBar.tsx",
       "source_location": "L16",
       "id": "huddangerbar_classify",
-      "community": 6,
+      "community": 8,
       "norm_label": "classify()"
     },
     {
@@ -288,7 +432,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/HudDangerBar.tsx",
       "source_location": "L28",
       "id": "huddangerbar_huddangerbar",
-      "community": 6,
+      "community": 8,
       "norm_label": "huddangerbar()"
     },
     {
@@ -297,7 +441,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/RoadInfoPanel.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_dashboard_roadinfopanel_tsx",
-      "community": 12,
+      "community": 14,
       "norm_label": "roadinfopanel.tsx"
     },
     {
@@ -306,7 +450,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/RoadInfoPanel.tsx",
       "source_location": "L9",
       "id": "roadinfopanel_roadinfopanel",
-      "community": 12,
+      "community": 14,
       "norm_label": "roadinfopanel()"
     },
     {
@@ -315,7 +459,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/dashboard/SpeedDisplay.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_dashboard_speeddisplay_tsx",
-      "community": 24,
+      "community": 26,
       "norm_label": "speeddisplay.tsx"
     },
     {
@@ -324,7 +468,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/map/MapViewClient.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_map_mapviewclient_tsx",
-      "community": 13,
+      "community": 15,
       "norm_label": "mapviewclient.tsx"
     },
     {
@@ -333,7 +477,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/map/MapViewClient.tsx",
       "source_location": "L16",
       "id": "mapviewclient_mapview",
-      "community": 13,
+      "community": 15,
       "norm_label": "mapview()"
     },
     {
@@ -342,7 +486,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/map/MapView.tsx",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_components_map_mapview_tsx",
-      "community": 14,
+      "community": 16,
       "norm_label": "mapview.tsx"
     },
     {
@@ -351,7 +495,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/components/map/MapView.tsx",
       "source_location": "L42",
       "id": "mapview_mapview",
-      "community": 14,
+      "community": 16,
       "norm_label": "mapview()"
     },
     {
@@ -360,7 +504,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useTrafficDetection.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_hooks_usetrafficdetection_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "usetrafficdetection.ts"
     },
     {
@@ -369,7 +513,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useTrafficDetection.ts",
       "source_location": "L27",
       "id": "usetrafficdetection_usetrafficdetection",
-      "community": 0,
+      "community": 1,
       "norm_label": "usetrafficdetection()"
     },
     {
@@ -378,7 +522,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useGeolocation.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_hooks_usegeolocation_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "usegeolocation.ts"
     },
     {
@@ -387,7 +531,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useGeolocation.ts",
       "source_location": "L12",
       "id": "usegeolocation_usegeolocation",
-      "community": 0,
+      "community": 1,
       "norm_label": "usegeolocation()"
     },
     {
@@ -396,7 +540,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_hooks_usedashboardengine_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "usedashboardengine.ts"
     },
     {
@@ -405,7 +549,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts",
       "source_location": "L18",
       "id": "usedashboardengine_usedashboardengine",
-      "community": 0,
+      "community": 1,
       "norm_label": "usedashboardengine()"
     },
     {
@@ -414,7 +558,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useDashboardEngine.ts",
       "source_location": "L132",
       "id": "usedashboardengine_obstaclelabel",
-      "community": 0,
+      "community": 1,
       "norm_label": "obstaclelabel()"
     },
     {
@@ -423,7 +567,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useCamera.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_hooks_usecamera_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "usecamera.ts"
     },
     {
@@ -432,7 +576,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useCamera.ts",
       "source_location": "L18",
       "id": "usecamera_usecamera",
-      "community": 0,
+      "community": 1,
       "norm_label": "usecamera()"
     },
     {
@@ -441,7 +585,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useSpeech.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_hooks_usespeech_ts",
-      "community": 0,
+      "community": 1,
       "norm_label": "usespeech.ts"
     },
     {
@@ -450,7 +594,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/hooks/useSpeech.ts",
       "source_location": "L12",
       "id": "usespeech_usespeech",
-      "community": 0,
+      "community": 1,
       "norm_label": "usespeech()"
     },
     {
@@ -459,7 +603,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/geocoding.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_lib_geocoding_ts",
-      "community": 7,
+      "community": 9,
       "norm_label": "geocoding.ts"
     },
     {
@@ -468,7 +612,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/geocoding.ts",
       "source_location": "L8",
       "id": "geocoding_reversegeocode",
-      "community": 7,
+      "community": 9,
       "norm_label": "reversegeocode()"
     },
     {
@@ -477,7 +621,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/geocoding.ts",
       "source_location": "L31",
       "id": "geocoding_parsemaxspeed",
-      "community": 7,
+      "community": 9,
       "norm_label": "parsemaxspeed()"
     },
     {
@@ -486,7 +630,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/types.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_lib_types_ts",
-      "community": 25,
+      "community": 27,
       "norm_label": "types.ts"
     },
     {
@@ -495,7 +639,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/obstacleDetector.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_lib_detection_obstacledetector_ts",
-      "community": 3,
+      "community": 0,
       "norm_label": "obstacledetector.ts"
     },
     {
@@ -504,7 +648,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/obstacleDetector.ts",
       "source_location": "L28",
       "id": "obstacledetector_loadobstaclemodel",
-      "community": 3,
+      "community": 0,
       "norm_label": "loadobstaclemodel()"
     },
     {
@@ -513,7 +657,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/obstacleDetector.ts",
       "source_location": "L38",
       "id": "obstacledetector_detectobstacles",
-      "community": 3,
+      "community": 0,
       "norm_label": "detectobstacles()"
     },
     {
@@ -522,7 +666,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/detectionService.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_lib_detection_detectionservice_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "detectionservice.ts"
     },
     {
@@ -531,7 +675,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/detectionService.ts",
       "source_location": "L15",
       "id": "detectionservice_nextid",
-      "community": 2,
+      "community": 3,
       "norm_label": "nextid()"
     },
     {
@@ -540,7 +684,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/detectionService.ts",
       "source_location": "L22",
       "id": "detectionservice_initmodels",
-      "community": 3,
+      "community": 0,
       "norm_label": "initmodels()"
     },
     {
@@ -549,7 +693,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/detectionService.ts",
       "source_location": "L26",
       "id": "detectionservice_detectframe",
-      "community": 3,
+      "community": 0,
       "norm_label": "detectframe()"
     },
     {
@@ -558,7 +702,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/detectionService.ts",
       "source_location": "L52",
       "id": "detectionservice_tosign",
-      "community": 2,
+      "community": 3,
       "norm_label": "tosign()"
     },
     {
@@ -567,7 +711,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/detectionService.ts",
       "source_location": "L65",
       "id": "detectionservice_toobstacle",
-      "community": 2,
+      "community": 3,
       "norm_label": "toobstacle()"
     },
     {
@@ -576,7 +720,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/geoEstimate.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_lib_detection_geoestimate_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "geoestimate.ts"
     },
     {
@@ -585,7 +729,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/geoEstimate.ts",
       "source_location": "L12",
       "id": "geoestimate_estimatedistancemeters",
-      "community": 2,
+      "community": 3,
       "norm_label": "estimatedistancemeters()"
     },
     {
@@ -594,7 +738,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/geoEstimate.ts",
       "source_location": "L23",
       "id": "geoestimate_estimatebearingdeg",
-      "community": 2,
+      "community": 3,
       "norm_label": "estimatebearingdeg()"
     },
     {
@@ -603,7 +747,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/geoEstimate.ts",
       "source_location": "L32",
       "id": "geoestimate_offsetlatlng",
-      "community": 2,
+      "community": 3,
       "norm_label": "offsetlatlng()"
     },
     {
@@ -612,7 +756,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/tfBackend.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_lib_detection_tfbackend_ts",
-      "community": 1,
+      "community": 0,
       "norm_label": "tfbackend.ts"
     },
     {
@@ -621,7 +765,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/tfBackend.ts",
       "source_location": "L6",
       "id": "tfbackend_ensurebackend",
-      "community": 1,
+      "community": 0,
       "norm_label": "ensurebackend()"
     },
     {
@@ -630,7 +774,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L1",
       "id": "users_thomas_projects_road_scout_src_lib_detection_signdetector_ts",
-      "community": 1,
+      "community": 0,
       "norm_label": "signdetector.ts"
     },
     {
@@ -639,7 +783,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L19",
       "id": "signdetector_setcustomsignmodelurl",
-      "community": 1,
+      "community": 0,
       "norm_label": "setcustomsignmodelurl()"
     },
     {
@@ -648,7 +792,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L26",
       "id": "signdetector_loadsignmodel",
-      "community": 3,
+      "community": 0,
       "norm_label": "loadsignmodel()"
     },
     {
@@ -657,7 +801,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L33",
       "id": "signdetector_loadcustommodel",
-      "community": 1,
+      "community": 0,
       "norm_label": "loadcustommodel()"
     },
     {
@@ -666,7 +810,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L39",
       "id": "signdetector_stubsignmodel",
-      "community": 1,
+      "community": 0,
       "norm_label": "stubsignmodel"
     },
     {
@@ -675,7 +819,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L40",
       "id": "signdetector_stubsignmodel_detect",
-      "community": 1,
+      "community": 0,
       "norm_label": ".detect()"
     },
     {
@@ -684,7 +828,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L45",
       "id": "signdetector_customsignmodel",
-      "community": 1,
+      "community": 0,
       "norm_label": "customsignmodel"
     },
     {
@@ -693,7 +837,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L46",
       "id": "signdetector_customsignmodel_constructor",
-      "community": 1,
+      "community": 0,
       "norm_label": ".constructor()"
     },
     {
@@ -702,7 +846,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L48",
       "id": "signdetector_customsignmodel_detect",
-      "community": 3,
+      "community": 0,
       "norm_label": ".detect()"
     },
     {
@@ -711,7 +855,7 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L63",
       "id": "signdetector_parseyolooutput",
-      "community": 1,
+      "community": 0,
       "norm_label": "parseyolooutput()"
     },
     {
@@ -720,11 +864,275 @@
       "source_file": "/Users/thomas/Projects/road-scout/src/lib/detection/signDetector.ts",
       "source_location": "L103",
       "id": "signdetector_classtosign",
-      "community": 1,
+      "community": 0,
       "norm_label": "classtosign()"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "_tgt": "prepare_dataset_download",
+      "source": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "target": "prepare_dataset_download",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "_tgt": "prepare_dataset_extract",
+      "source": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "target": "prepare_dataset_extract",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "_tgt": "prepare_dataset_ensure_dir",
+      "source": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "target": "prepare_dataset_ensure_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "_tgt": "prepare_dataset_prepare_gtsdb",
+      "source": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "target": "prepare_dataset_prepare_gtsdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "_tgt": "prepare_dataset_prepare_coco",
+      "source": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "target": "prepare_dataset_prepare_coco",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L253",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "_tgt": "prepare_dataset_main",
+      "source": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "target": "prepare_dataset_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "prepare_dataset_rationale_1",
+      "_tgt": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "source": "users_thomas_projects_road_scout_training_prepare_dataset_py",
+      "target": "prepare_dataset_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "_src": "prepare_dataset_prepare_gtsdb",
+      "_tgt": "prepare_dataset_download",
+      "source": "prepare_dataset_download",
+      "target": "prepare_dataset_prepare_gtsdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "_src": "prepare_dataset_prepare_coco",
+      "_tgt": "prepare_dataset_download",
+      "source": "prepare_dataset_download",
+      "target": "prepare_dataset_prepare_coco",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_src": "prepare_dataset_prepare_gtsdb",
+      "_tgt": "prepare_dataset_extract",
+      "source": "prepare_dataset_extract",
+      "target": "prepare_dataset_prepare_gtsdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L183",
+      "weight": 1.0,
+      "_src": "prepare_dataset_prepare_coco",
+      "_tgt": "prepare_dataset_extract",
+      "source": "prepare_dataset_extract",
+      "target": "prepare_dataset_prepare_coco",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "_src": "prepare_dataset_prepare_gtsdb",
+      "_tgt": "prepare_dataset_ensure_dir",
+      "source": "prepare_dataset_ensure_dir",
+      "target": "prepare_dataset_prepare_gtsdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "_src": "prepare_dataset_prepare_coco",
+      "_tgt": "prepare_dataset_ensure_dir",
+      "source": "prepare_dataset_ensure_dir",
+      "target": "prepare_dataset_prepare_coco",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "_src": "prepare_dataset_main",
+      "_tgt": "prepare_dataset_ensure_dir",
+      "source": "prepare_dataset_ensure_dir",
+      "target": "prepare_dataset_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L262",
+      "weight": 1.0,
+      "_src": "prepare_dataset_main",
+      "_tgt": "prepare_dataset_prepare_gtsdb",
+      "source": "prepare_dataset_prepare_gtsdb",
+      "target": "prepare_dataset_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_src": "prepare_dataset_rationale_101",
+      "_tgt": "prepare_dataset_prepare_gtsdb",
+      "source": "prepare_dataset_prepare_gtsdb",
+      "target": "prepare_dataset_rationale_101",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L263",
+      "weight": 1.0,
+      "_src": "prepare_dataset_main",
+      "_tgt": "prepare_dataset_prepare_coco",
+      "source": "prepare_dataset_prepare_coco",
+      "target": "prepare_dataset_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/prepare_dataset.py",
+      "source_location": "L178",
+      "weight": 1.0,
+      "_src": "prepare_dataset_rationale_178",
+      "_tgt": "prepare_dataset_prepare_coco",
+      "source": "prepare_dataset_prepare_coco",
+      "target": "prepare_dataset_rationale_178",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/export_models.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_export_models_py",
+      "_tgt": "export_models_main",
+      "source": "users_thomas_projects_road_scout_training_export_models_py",
+      "target": "export_models_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/export_models.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "export_models_rationale_1",
+      "_tgt": "users_thomas_projects_road_scout_training_export_models_py",
+      "source": "users_thomas_projects_road_scout_training_export_models_py",
+      "target": "export_models_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/train.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "users_thomas_projects_road_scout_training_train_py",
+      "_tgt": "train_main",
+      "source": "users_thomas_projects_road_scout_training_train_py",
+      "target": "train_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thomas/Projects/road-scout/training/train.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "train_rationale_1",
+      "_tgt": "users_thomas_projects_road_scout_training_train_py",
+      "source": "users_thomas_projects_road_scout_training_train_py",
+      "target": "train_rationale_1",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",

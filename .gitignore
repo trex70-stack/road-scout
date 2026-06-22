@@ -46,3 +46,11 @@ next-env.d.ts
 # graphify (AST cache is regenerable; keep graph.json + report)
 graphify-out/cache/
 
+# training (Python venv + grosse Daten + Trainings-Artefakte)
+training/venv/
+training/data/
+training/__pycache__/
+road_scout_runs/
+*.pt
+*.mlpackage
+

@@ -1,0 +1,16 @@
+path: ./data/road_scout
+train: images/train
+val: images/val
+
+names:
+  0: speed_limit_30
+  1: speed_limit_50
+  2: speed_limit_70
+  3: speed_limit_100
+  4: stop
+  5: yield
+  6: no_entry
+  7: car
+  8: truck
+  9: bus
+  10: person
