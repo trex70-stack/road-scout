@@ -101,7 +101,7 @@ function preprocess(video: HTMLVideoElement, size: number): Float32Array {
   return tensor;
 }
 
-function postprocess(
+export function postprocess(
   output: Float32Array,
   frameWidth: number,
   frameHeight: number
@@ -158,7 +158,7 @@ function postprocess(
   return nms(candidates, IOU_THRESHOLD);
 }
 
-function nms(detections: YoloDetection[], iouThreshold: number): YoloDetection[] {
+export function nms(detections: YoloDetection[], iouThreshold: number): YoloDetection[] {
   const sorted = [...detections].sort((a, b) => b.confidence - a.confidence);
   const kept: YoloDetection[] = [];
   const suppressed = new Set<number>();
@@ -176,7 +176,7 @@ function nms(detections: YoloDetection[], iouThreshold: number): YoloDetection[]
   return kept;
 }
 
-function computeIoU(a: BBox, b: BBox): number {
+export function computeIoU(a: BBox, b: BBox): number {
   const [ax, ay, aw, ah] = a;
   const [bx, by, bw, bh] = b;
   const x1 = Math.max(ax, bx);

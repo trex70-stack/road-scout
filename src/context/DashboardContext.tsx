@@ -10,7 +10,7 @@ import type {
   FrameBoxes,
 } from "@/lib/types";
 
-type Action =
+export type Action =
   | { type: "SET_POSITION"; position: GeoPosition }
   | { type: "SET_ROAD"; road: RoadInfo }
   | { type: "ADD_SIGN"; sign: DetectedSign }
@@ -24,7 +24,7 @@ type Action =
 const MAX_SIGNS = 10;
 const MAX_OBSTACLES = 20;
 
-function reducer(state: DashboardState, action: Action): DashboardState {
+export function reducer(state: DashboardState, action: Action): DashboardState {
   switch (action.type) {
     case "SET_POSITION":
       return { ...state, position: action.position };
@@ -63,7 +63,7 @@ function reducer(state: DashboardState, action: Action): DashboardState {
   }
 }
 
-const initialState: DashboardState = {
+export const initialState: DashboardState = {
   position: null,
   currentRoad: null,
   signs: [],
@@ -74,7 +74,7 @@ const initialState: DashboardState = {
   lastFrame: null,
 };
 
-interface DashboardContextValue {
+export interface DashboardContextValue {
   state: DashboardState;
   setPosition: (position: GeoPosition) => void;
   setRoad: (road: RoadInfo) => void;

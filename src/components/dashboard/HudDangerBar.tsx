@@ -13,7 +13,7 @@ interface DangerLevel {
   pulse: boolean;
 }
 
-function classify(distance: number): DangerLevel {
+export function classify(distance: number): DangerLevel {
   if (distance < 20) {
     return { color: "text-red-700", barColor: "bg-red-600", label: "Gefahr", pulse: true };
   }
