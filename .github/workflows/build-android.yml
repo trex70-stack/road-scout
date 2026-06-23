@@ -73,13 +73,13 @@ jobs:
         run: |
           sed -i 's|gradle-8.2.1-all.zip|gradle-8.7-all.zip|' android/gradle/wrapper/gradle-wrapper.properties
 
-      - name: Set APK output filename
-        run: |
-          sed -i '/^}/a\    applicationVariants.all { variant ->\n        variant.outputs.each { output ->\n            output.outputFileName = "road-scout-${variant.name}.apk"\n        }\n    }' android/app/build.gradle
-
       - name: Build debug APK
         working-directory: android
         run: ./gradlew assembleDebug
+
+      - name: Rename APK
+        run: |
+          mv android/app/build/outputs/apk/debug/app-debug.apk android/app/build/outputs/apk/debug/road-scout-debug.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
