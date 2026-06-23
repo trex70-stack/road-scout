@@ -66,3 +66,22 @@ Capacitor-Plugins installiert: Geolocation, Camera, Network, Haptics, StatusBar,
 - Schilder-Trainingsdaten ergänzen (GTSDB offline – Roboflow/eigene Aufnahmen)
 - Offline-Karten (Vector Tiles)
 - Login / Backend (aktuell unentschieden)
+
+## Tests
+
+```bash
+npm test           # alle 130 Tests ausfuehren
+npm run test:watch # Tests im Watch-Modus
+```
+
+Deckt Unit-Tests (Geo-Schätzung, YOLO-Postprocessing, Reducer), Komponenten-Tests (Dashboard-Widgets) und Integration-Tests (detectFrame, Dashboard-Flow) ab.
+
+## CI / Android APK via GitHub Actions
+
+Bei jedem Push auf `main` (oder manuell via "Run workflow"):
+
+1. **Test-Job:** Lint + Typecheck + 130 Tests – muessen alle gruen sein
+2. **Build-Job:** Static Export + Capacitor Android + APK-Build
+3. **Artifact:** APK liegt im Actions-Tab unter "Artifacts" → `road-scout-apk`
+
+Download unter: https://github.com/trex70-stack/road-scout/actions
