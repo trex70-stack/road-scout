@@ -35,7 +35,7 @@ const CLASS_NAMES: DetectionClass[] = [
   "person",
 ];
 
-const INPUT_SIZE = 640;
+const INPUT_SIZE = 1280;
 const CONF_THRESHOLD = 0.45;
 const IOU_THRESHOLD = 0.5;
 const MODEL_URL = "/models/yolov8n_road/best.onnx";
